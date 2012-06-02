@@ -9,7 +9,7 @@
            review="review.cyanogenmod.com" />
 
   <remote  name="paranoid"
-           fetch="https://bitbucket.org/paranoidandroid/" />
+           fetch="ssh://git@bitbucket.org/paranoidandroid/" />
 
   <default revision="refs/heads/ics"
            remote="github"
