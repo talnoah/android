@@ -4,7 +4,7 @@ Getting Started
 
 To initialize your local repository using the ParanoidAndroid trees, use a command like this:
 
-    repo init -u git@bitbucket.com:paranoidandroid/android.git -b ics
+    repo init -u git@bitbucket.org:paranoidandroid/android.git -b ics
 
 Then to sync up:
 
