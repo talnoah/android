@@ -270,4 +270,6 @@
   <project path="system/vold" name="CyanogenMod/android_system_vold" />
 
   <project path="android" name="CyanogenMod/android" />
+
+  <project path="vendor/samsung" name="koush/proprietary_vendor_samsung" />
 </manifest>
