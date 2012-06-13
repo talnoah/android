@@ -54,7 +54,7 @@
   <project path="external/dbus" name="CyanogenMod/android_external_dbus" />
   <project path="external/dhcpcd" name="CyanogenMod/android_external_dhcpcd" />
   <project path="external/dnsmasq" name="CyanogenMod/android_external_dnsmasq" />
-  <project path="external/doclava" name="platform/external/doclava" remote="aosp" revision="refs/tags/android-4.0.4_r1.2" />
+  <project path="external/doclava"  name="android_external_doclava" remote="paranoid" revision="ics" />
   <project path="external/dropbear" name="CyanogenMod/android_external_dropbear" />
   <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" />
   <project path="external/easymock" name="CyanogenMod/android_external_easymock" />
