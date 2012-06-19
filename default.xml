@@ -10,6 +10,9 @@
 
   <remote  name="paranoid"
            fetch="ssh://git@bitbucket.org/paranoidandroid/" />
+		   
+  <remote  name="paranoid-github"
+           fetch="https://github.com/" />
 
   <default revision="refs/heads/ics"
            remote="github"
@@ -213,8 +216,8 @@
   <project path="packages/apps/MusicFX" name="CyanogenMod/android_packages_apps_MusicFX" />
   <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" />
   <project path="packages/apps/PackageInstaller" name="CyanogenMod/android_packages_apps_PackageInstaller" />
-  <project path="packages/apps/ParanoidBackup" name="android_packages_apps_paranoidbackup" remote="paranoid" revision="master" />
-  <project path="packages/apps/ParanoidOTA" name="android_packages_apps_paranoidota" remote="paranoid" revision="master" />
+  <project path="packages/apps/ParanoidBackup" name="Paranoid4ndroid/android_packages_apps_ParanoidBackup" remote="paranoid-github" revision="ics" />
+  <project path="packages/apps/ParanoidOTA" name="Paranoid4ndroid/android_packages_apps_ParanoidOTA" remote="paranoid-github" revision="ics"/>
   <project path="packages/apps/Phone" name="CyanogenMod/android_packages_apps_Phone" />
   <project path="packages/apps/Protips" name="CyanogenMod/android_packages_apps_Protips" />
   <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
@@ -227,7 +230,7 @@
   <project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" />
   <project path="packages/apps/Tag" name="CyanogenMod/android_packages_apps_Tag" />
   <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" />
-  <project path="packages/apps/Trebuchet" name="android_packages_apps_trebuchet" remote="paranoid" />
+  <project path="packages/apps/Trebuchet" name="Paranoid4ndroid/android_packages_apps_Trebuchet" remote="paranoid-github" revision="ics"/>
   <project path="packages/apps/Usb" name="CyanogenMod/android_packages_apps_Usb" />
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" />
