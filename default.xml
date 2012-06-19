@@ -274,5 +274,4 @@
 
   <project path="android" name="android" remote="paranoid" revision="ics"/>
 
-  <project path="vendor/samsung" name="koush/proprietary_vendor_samsung" />
 </manifest>
