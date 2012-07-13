@@ -11,6 +11,9 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
+  <remote  name="paranoid"
+           fetch="ssh://git@bitbucket.org/paranoidandroid/" />
+		   
   <default revision="refs/heads/jellybean"
            remote="github"
            sync-j="4" />
@@ -18,8 +21,6 @@
   <project path="build" name="CyanogenMod/android_build">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-
-  <project path="android" name="CyanogenMod/android" />
 
   <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" />
   <project path="bionic" name="CyanogenMod/android_bionic" />
@@ -192,6 +193,7 @@
   <project path="external/zxing" name="CyanogenMod/android_external_zxing" />
   <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" />
   <project path="frameworks/base" name="CyanogenMod/android_frameworks_base" />
+  <project path="frameworks/base" name="cm10_frameworks_base" remote="paranoid" revision="jellybean" />
   <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" />
   <project path="frameworks/compile/linkloader" name="CyanogenMod/android_frameworks_compile_linkloader" />
   <project path="frameworks/compile/mclinker" name="CyanogenMod/android_frameworks_compile_mclinker" />
@@ -318,4 +320,10 @@
   <project path="system/security" name="CyanogenMod/android_system_security" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" />
   <project path="vendor/cm" name="CyanogenMod/android_vendor_cm" />
+
+  <project path="paranoid" name="ParanoidAndroid/paranoid">
+    <copyfile src="build.sh" dest="rom-build.sh" />
+  </project>
+  <project path="vendor/pa" name="ParanoidAndroid/android_vendor_pa" />
+  <project path="android" name="ParanoidAndroid/android" />
 </manifest>
