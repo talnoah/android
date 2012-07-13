@@ -192,8 +192,9 @@
   <project path="external/zlib" name="CyanogenMod/android_external_zlib" />
   <project path="external/zxing" name="CyanogenMod/android_external_zxing" />
   <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" />
+<!--
   <project path="frameworks/base" name="CyanogenMod/android_frameworks_base" />
-  <project path="frameworks/base" name="cm10_frameworks_base" remote="paranoid" revision="jellybean" />
+-->
   <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" />
   <project path="frameworks/compile/linkloader" name="CyanogenMod/android_frameworks_compile_linkloader" />
   <project path="frameworks/compile/mclinker" name="CyanogenMod/android_frameworks_compile_mclinker" />
@@ -321,6 +322,7 @@
   <project path="system/vold" name="CyanogenMod/android_system_vold" />
   <project path="vendor/cm" name="CyanogenMod/android_vendor_cm" />
 
+  <project path="frameworks/base" name="cm10_frameworks_base" remote="paranoid" revision="jellybean" />
   <project path="paranoid" name="ParanoidAndroid/paranoid">
     <copyfile src="build.sh" dest="rom-build.sh" />
   </project>
