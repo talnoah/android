@@ -339,9 +339,6 @@
   <project path="external/doclava" name="ParanoidAndroid/android_external_doclava" />
   <project path="frameworks/base" name="cm10_frameworks_base" remote="paranoid" revision="jellybean" />
   <project path="packages/apps/ParanoidPreferences" name="android_packages_apps_paranoidpreferences" remote="paranoid" revision="jellybean" />
-<!--
-  <project path="packages/apps/ParanoidOTA" name="ParanoidAndroid/android_packages_apps_ParanoidOTA" revision="ics" />
--->
   <project path="packages/apps/Settings" name="ParanoidAndroid/android_packages_apps_Settings" />
 
   <project path="paranoid" name="ParanoidAndroid/paranoid">
