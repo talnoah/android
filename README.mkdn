@@ -1,5 +1,7 @@
+Paranoid Android 4.1.2 CM Based
+--------------------------------------------------------------
 repo init -u git://github.com/talnoah/android.git -b jellybean
-
+--------------------------------------------------------------
 repo sync
 
 
