@@ -49,3 +49,6 @@ Build
 . build/envsetup.sh
 
 brunch cm_dlx
+
+
+Problems? Visit XDA thread @ http://forum.xda-developers.com/showthread.php?t=2056517
