@@ -15,40 +15,38 @@ etc/agps_rm
 bin/adaptive
 bin/akmd
 bin/ATFWD-daemon
-#bin/bridgemgrd
+bin/bridgemgrd
 bin/bma150_usr
 bin/charging
 #bin/ds_fmc_appd
 bin/efsks
 bin/hci_qcomm_init
-#bin/hcheck
+bin/hcheck
 bin/hdmid
-#bin/ks
-#bin/mm-qcamera-daemon
+bin/ks
+bin/mm-qcamera-daemon
 bin/mpdecision
-#bin/mm-pp-daemon
+bin/mm-pp-daemon
 bin/netmgrd
-#bin/nl_listener
-#bin/netsharing
+bin/nl_listener
+bin/netsharing
 bin/pnpmgr
-#bin/qcks
-#bin/qmiproxy
-#bin/qmuxd
-#bin/qseecomd
+bin/qcks
+bin/qmiproxy
+bin/qmuxd
+bin/qseecomd
 bin/radish
 #bin/sensorservice
 #bin/shutdown
 bin/thermald
-#bin/usbhub
-#bin/usbhub_init
+bin/usbhub
+bin/usbhub_init
 bin/v4l2-qcamera-app
 
 
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
-#lib/libcsd-client.so
-#lib/libbeatscorehtc.so
 
 # Graphics
 lib/libmode10GLES20.so
@@ -84,10 +82,10 @@ lib/libposteffect.so
 lib/libgemini.so
 lib/libmmipl.so
 lib/libmmjpeg.so
-#lib/libmmosal.so
-#lib/libmmparser.so
-#lib/libmmparser_divxdrmlib.so
-#lib/libmmparser_lite.so
+lib/libmmosal.so
+lib/libmmparser.so
+lib/libmmparser_divxdrmlib.so
+lib/libmmparser_lite.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_rawchipproc.so
 lib/libmmcamera_statsproc31.so
@@ -183,7 +181,7 @@ lib/libqmi_common_so.so
 lib/libqmi_csi.so
 lib/libqmi_encdec.so
 lib/libqmiservices.so
-#lib/libqmi_client_qmux.so
+lib/libqmi_client_qmux.so
 lib/libQSEEComAPI.so
 
 # Radio
