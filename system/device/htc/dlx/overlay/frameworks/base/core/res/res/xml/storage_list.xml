@@ -31,10 +31,9 @@
 
       A storage should not have both emulated and removable set to true
 -->
-<!--
 <StorageList xmlns:android="http://schemas.android.com/apk/res/android">
     <storage android:mountPoint="/storage/sdcard0"
-             android:storageDescription="@string/storage_sd_card"
+             android:storageDescription="@string/storage_internal"
              android:primary="true"
              android:removable="false"
              android:allowMassStorage="true" />
@@ -42,11 +41,4 @@
              android:storageDescription="@string/storage_usb"
              android:primary="false"
              android:removable="true" />
-</StorageList> -->
-<StorageList xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- internal emulated storage -->
-    <storage
-        android:storageDescription="@string/storage_internal"
-        android:emulated="true"
-        android:mtpReserve="100" />
 </StorageList>
