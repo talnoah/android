@@ -109,7 +109,7 @@ WIFI_DRIVER_FW_PATH_P2P 		:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
 WIFI_DRIVER_MODULE_NAME 		:= bcmdhd
 WIFI_DRIVER_MODULE_PATH 		:= "/system/lib/modules/bcmdhd.ko"
 WPA_SUPPLICANT_VERSION 			:= VER_0_8_X
-WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/wifi/bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
+WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
 WIFI_BAND 				:= 802_11_ABG
 
 # Webkit
