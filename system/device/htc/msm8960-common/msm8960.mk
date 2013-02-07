@@ -73,11 +73,6 @@ PRODUCT_PACKAGES += \
         libmmcamera_interface
 
 # Graphics
-#PRODUCT_PACKAGES += \
-    hwcomposer.default \
-    hwcomposer.msm8960 \
-    libion
-
 PRODUCT_PACKAGES += \
     copybit.msm8960 \
     gralloc.default \
@@ -162,13 +157,13 @@ PRODUCT_COPY_FILES += \
 # Common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
-    debug.composition.type=gpu \
+    debug.composition.type=dyn \
     debug.enabletr=true \
     ro.hwui.renderer.disable_opaque=true \
     ro.sf.lcd_density=480 \
-    debug.egl.hw=0 \
-    debug.mdpcomp.maxlayer=1 \
-    debug.sf.buffercount=3 \
+    debug.egl.hw=1 \
+    debug.mdpcomp.maxlayer=3 \
+    debug.mdpcomp.logs=0
     debug.sf.hw=1 \
     lpa.decode=true \
     persist.audio.fluence.mode=endfire \
