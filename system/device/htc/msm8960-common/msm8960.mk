@@ -61,9 +61,13 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudio-resampler
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    hci_qcomm_init
+
 # Camera
 PRODUCT_PACKAGES += \
-        camera.dlx \
+   camera.dlx \
         camera.msm8960 \
         libmmcamera_interface2 \
         libmmcamera_interface
