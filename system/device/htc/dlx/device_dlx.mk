@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
     device/htc/dlx/ramdisk/ueventd.dlx.rc:root/ueventd.dlx.rc
 
 PRODUCT_COPY_FILES += \
-    device/htc/dlx/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+    device/htc/dlx/prebuilt/bootanimation.zip:/system/media/bootanimation.zip
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -42,10 +42,10 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # HTC BT audio config
-PRODUCT_COPY_FILES += device/htc/dlx/configs/AudioBTID.csv:system/etc/AudioBTID.csv
+PRODUCT_COPY_FILES += device/htc/dlx/configs/AudioBTID.csv:/system/etc/AudioBTID.csv
 
 # QC thermald config
-PRODUCT_COPY_FILES += device/htc/msm8960-common/configs/thermald.conf:system/etc/thermald.conf
+PRODUCT_COPY_FILES += device/htc/msm8960-common/configs/thermald.conf:/system/etc/thermald.conf
 
 # vold config
 PRODUCT_COPY_FILES += \
@@ -57,43 +57,45 @@ PRODUCT_COPY_FILES += \
 
 # Sound configs
 PRODUCT_COPY_FILES += \
-    device/htc/dlx/dsp/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
+    device/htc/dlx/dsp/soundimage/srs_bypass.cfg:/system/etc/soundimage/srs_bypass.cfg \
     device/htc/dlx/dsp/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
-    device/htc/dlx/dsp/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
-    device/htc/dlx/dsp/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
-    device/htc/dlx/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
-    device/htc/dlx/dsp/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg \
-    device/htc/dlx/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
+    device/htc/dlx/dsp/soundimage/srsfx_trumedia_movie.cfg:/system/etc/soundimage/srsfx_trumedia_movie.cfg \
+    device/htc/dlx/dsp/soundimage/srsfx_trumedia_music.cfg:/system/etc/soundimage/srsfx_trumedia_music.cfg \
+    device/htc/dlx/dsp/soundimage/srsfx_trumedia_voice.cfg:/system/etc/soundimage/srsfx_trumedia_voice.cfg \
+    device/htc/dlx/dsp/soundimage/srs_geq10.cfg:/system/etc/soundimage/srs_geq10.cfg \
+    device/htc/dlx/dsp/soundimage/srs_global.cfg:/system/etc/soundimage/srs_global.cfg
 
 PRODUCT_COPY_FILES += \
-    device/htc/dlx/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x 
+    device/htc/dlx/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
+    device/htc/dlx/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3:/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+    device/htc/dlx/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3_DMIC:/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3_DMIC
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/dlx/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/htc/dlx/keylayout/dummy_keypad.kl:system/usr/keylayout/dummy_keypad.kl \
-    device/htc/dlx/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-    device/htc/dlx/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl \
-    device/htc/dlx/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/dlx/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
-    device/htc/dlx/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
-    device/htc/dlx/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/dlx/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
-    device/htc/dlx/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
-    device/htc/dlx/keylayout/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
-    device/htc/dlx/keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
-    device/htc/dlx/keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
-    device/htc/dlx/keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
-    device/htc/dlx/keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
-    device/htc/dlx/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
-    device/htc/dlx/keylayout/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl 
+    device/htc/dlx/keylayout/AVRCP.kl:/system/usr/keylayout/AVRCP.kl \
+    device/htc/dlx/keylayout/dummy_keypad.kl:/system/usr/keylayout/dummy_keypad.kl \
+    device/htc/dlx/keylayout/Generic.kl:/system/usr/keylayout/Generic.kl \
+    device/htc/dlx/keylayout/projector-Keypad.kl:/system/usr/keylayout/projector-Keypad.kl \
+    device/htc/dlx/keylayout/h2w_headset.kl:/system/usr/keylayout/h2w_headset.kl \
+    device/htc/dlx/keylayout/keypad_8960.kl:/system/usr/keylayout/keypad_8960.kl \
+    device/htc/dlx/keylayout/msm8960-snd-card_Button_Jack.kl:/system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
+    device/htc/dlx/keylayout/qwerty.kl:/system/usr/keylayout/qwerty.kl \
+    device/htc/dlx/keylayout/synaptics-rmi-touchscreen.kl:/system/usr/keylayout/synaptics-rmi-touchscreen.kl \
+    device/htc/dlx/keylayout/Vendor_045e_Product_028e.kl:/system/usr/keylayout/Vendor_045e_Product_028e.kl \
+    device/htc/dlx/keylayout/Vendor_046d_Product_c216.kl:/system/usr/keylayout/Vendor_046d_Product_c216.kl \
+    device/htc/dlx/keylayout/Vendor_046d_Product_c294.kl:/system/usr/keylayout/Vendor_046d_Product_c294.kl \
+    device/htc/dlx/keylayout/Vendor_046d_Product_c299.kl:/system/usr/keylayout/Vendor_046d_Product_c299.kl \
+    device/htc/dlx/keylayout/Vendor_046d_Product_c532.kl:/system/usr/keylayout/Vendor_046d_Product_c532.kl \
+    device/htc/dlx/keylayout/Vendor_054c_Product_0268.kl:/system/usr/keylayout/Vendor_054c_Product_0268.kl \
+    device/htc/dlx/keylayout/Vendor_05ac_Product_0239.kl:/system/usr/keylayout/Vendor_05ac_Product_0239.kl \
+    device/htc/dlx/keylayout/Vendor_22b8_Product_093d.kl:/system/usr/keylayout/Vendor_22b8_Product_093d.kl 
 
 # Input device config
 PRODUCT_COPY_FILES += \
-    device/htc/dlx/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/dlx/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    device/htc/dlx/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-    device/htc/dlx/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
+    device/htc/dlx/idc/projector_input.idc:/system/usr/idc/projector_input.idc \
+    device/htc/dlx/idc/qwerty2.idc:/system/usr/idc/qwerty2.idc \
+    device/htc/dlx/idc/qwerty.idc:/system/usr/idc/qwerty.idc \
+    device/htc/dlx/idc/synaptics-rmi-touchscreen.idc:/system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -118,10 +120,10 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-        frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-        frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-        frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-        frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+        frameworks/native/data/etc/android.hardware.nfc.xml:/system/etc/permissions/android.hardware.nfc.xml \
+        frameworks/base/nfc-extras/com.android.nfc_extras.xml:/system/etc/permissions/com.android.nfc_extras.xml \
+        frameworks/native/data/etc/android.hardware.telephony.cdma.xml:/system/etc/permissions/android.hardware.telephony.cdma.xml \
+        frameworks/native/data/etc/android.hardware.telephony.gsm.xml:/system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
