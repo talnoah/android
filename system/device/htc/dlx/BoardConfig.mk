@@ -50,14 +50,20 @@ TARGET_PREBUILT_KERNEL := device/htc/dlx/prebuilt/kernel
 TARGET_KERNEL_CONFIG := dlx_defconfig
 
 # Audio
-BOARD_USES_ALSA_AUDIO:= true
+#BOARD_USES_ALSA_AUDIO:= true
 
 # Use libril in the device tree
-BOARD_PROVIDES_LIBRIL := true
+#BOARD_PROVIDES_LIBRIL := true
+#BOARD_RIL_CLASS := "../../../device/htc/msm8960-common/libril/"
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
+
+# Mediaplayer
+BOARD_USES_HW_MEDIAPLUGINS := false
+BOARD_USES_HW_MEDIASCANNER := false
+BOARD_USES_HW_MEDIARECORDER := false
 
 # QCOM GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
@@ -65,7 +71,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := dlx
 
 # RIL
 #BOARD_USE_NEW_LIBRIL_HTC := true
-#TARGET_PROVIDES_LIBRIL := vendor/htc/dlx/proprietary/lib/libhtc-ril.so
+#TARGET_PROVIDES_LIBRIL := vendor/htc/dlx/proprietary/lib/libhtc_rilhook.so
 BOARD_PROVIDES_LIBRIL := true
 
 # Lights
@@ -74,9 +80,9 @@ TARGET_PROVIDES_LIBLIGHTS := true
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# Wifi
-WIFI_DRIVER_MODULE_NAME          := bcmdhd
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
+# Wifi (in msm BoardConfig)
+#WIFI_DRIVER_MODULE_NAME          := bcmdhd
+#WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
 
 # HTC DNA PARTITION LAYOUT 
 
@@ -107,7 +113,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1946156032
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12482248704
-BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_FLASH_BLOCK_SIZE := 4096 
 BOARD_VOLD_MAX_PARTITIONS := 36
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
