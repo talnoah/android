@@ -73,15 +73,17 @@ BOARD_USES_FLUENCE_INCALL 		:= true
 BOARD_USES_SEPERATED_AUDIO_INPUT 	:= true
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH 			:= true
-TARGET_CUSTOM_BLUEDROID 		:= ../../../device/htc/msm8960-common/bluetooth/bluetooth.c
+
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
 
 # FM radio
 #BOARD_HAVE_QCOM_FM := true
 #COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
 
 # QCOM GPS
-#BOARD_USES_QCOM_GPS := true
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
 # Graphics
 COMMON_GLOBAL_CFLAGS 			+= -DQCOM_NO_SECURE_PLAYBACK
@@ -91,7 +93,7 @@ BOARD_EGL_CFG 				:= device/htc/msm8960-common/configs/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB 		:= true
 USE_OPENGL_RENDERER 			:= true
 TARGET_USES_ION 			:= true
-#TARGET_USES_OVERLAY := true
+TARGET_USES_OVERLAY 			:= true
 
 
 #RIL
@@ -112,9 +114,9 @@ WIFI_DRIVER_FW_PATH_STA 		:= "/system/etc/firmware/fw_bcm4334.bin"
 WIFI_DRIVER_FW_PATH_P2P 		:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
 WIFI_DRIVER_MODULE_NAME 		:= "bcmdhd"
 WIFI_DRIVER_MODULE_PATH 		:= "/system/lib/modules/bcmdhd.ko"
-WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/bcmdhd/parameters/firmware_path"
+#WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/bcmdhd/parameters/firmware_path"
 WPA_SUPPLICANT_VERSION 			:= VER_0_8_X
-WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
+#WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
 WIFI_BAND 				:= 802_11_ABG
 
 # Webkit
