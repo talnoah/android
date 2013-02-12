@@ -39,7 +39,7 @@ else
     NFCEE_ACCESS_PATH := device/htc/dlx/configs/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
+    $(NFCEE_ACCESS_PATH):/system/etc/nfcee_access.xml
 
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/dlx/configs/AudioBTID.csv:/system/etc/AudioBTID.csv

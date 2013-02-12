@@ -1,19 +1,45 @@
 #
-# system.prop for dlx
+# system.prop for dna
 #
 
 # Extra build properties
 keyguard.no_require_sim=true
 
-# RIL / Network
+# Screen
+ro.sf.lcd_density=480
+
+# RIL
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ril.subscription.types=NV,RUIM
-#ro.telephony.ril_class=HTC8960RIL
+ro.telephony.ril_class=HTC8960RIL
+
+# Default to LTE/CDMA/EvDo/GSM/WCDMA Network Mode
 ro.telephony.default_network=10
+
 DEVICE_PROVISIONED=1
+
+# Supports LTE
 telephony.lteOnCdmaDevice=1
+
+# Supports simultaneous 1x voice + LTE
+ro.config.svlte1x=true
+
+# RF team request
+ro.ril.enable.dtm = 0
+ro.ril.gprsclass = 12
+ro.ril.hsdpa.category = 10
+ro.ril.hsupa.category = 6
+ro.ril.hsxpa = 3
+
+# HSDPA low throughput
+ro.ril.disable.power.collapse = 1
+
+# netmgrd
+ro.use_data_netmgrd=true
+persist.data_netmgrd_nint=8
+persist.data_netmgrd_mtu=1428
 
 # Get CDMA subscription when RUIM is ready
 ro.cdma.subscribe_on_ruim_ready = true
@@ -21,6 +47,12 @@ persist.radio.no_wait_for_card=1
 
 # Verizon data retry
 ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
+
+# Send transmit power request to RIL during WiFi hotspot on/off
+ro.ril.transmitpower=true
+
+# GLOBALMODE for Verizon
+# ro.config.multimode_cdma=1
 
 # Carrier definitions
 ro.cdma.home.operator.alpha=Verizon
@@ -30,81 +62,40 @@ ro.cdma.home.operator.numeric=310012
 gsm.sim.operator.numeric=310012
 gsm.operator.numeric=310012
 
-# system props for display
-debug.sf.hw=1
-debug.egl.hw=1
-debug.composition.type=gpu
-ro.sf.lcd_density=480
-debug.mdpcomp.maxlayer=3
-debug.hwui.render_dirty_regions=false
+# Access to Verizon/HTC apps in Play store
+ro.com.google.clientidbase=android-htc
+ro.com.google.clientidbase.yt=android-verizon
+ro.com.google.clientidbase.am=android-verizon
+ro.com.google.clientidbase.gmm=android-htc
+ro.com.google.clientidbase.ms=android-verizon
 
+# Verizon Wireless default ecclist
+ro.ril.ecclist=112,911,#911,*911
+
+# Switch GPS driver to QMI
+persist.gps.qmienabled=true
+
+# Set GPS mode
+ro.ril.def.agps.mode=6
+
+# NFC
+debug.nfc.fw_download=true
+debug.nfc.fw_boot_download=false
+debug.nfc.se=true
+ro.nfc.port=I2C
+
+# Enable time services
+persist.timed.enable=true
+
+# UMS/MTP
+persist.sys.usb.config=mass_storage,adb
+
+debug.hwui.render_dirty_regions=false
 dalvik.vm.heapsize=384m
 dalvik.vm.heapgrowthlimit=192m
 dalvik.vm.heapstartsize=8m
-dev.pm.dyn_samplingrate=1
 
 ro.hdmi.enable=true
 
-#
-# system props for the data modules
-#
-ro.use_data_netmgrd=true
-
-#system props for time-services
-persist.timed.enable=true
-
-# System props for audio
-persist.audio.fluence.mode=endfire
-persist.audio.vr.enable=false
-persist.audio.handset.mic=digital
-# System props for soundhound
-persist.htc.audio.pcm.samplerate=48000
-persist.htc.audio.pcm.channels=2
-
-# System prop to select audio resampler quality
-af.resampler.quality=255
-
-# OpenGL 
-ro.opengles.version=131072
-
-#system prop for switching gps driver to qmi
-persist.gps.qmienabled=true
-
-# System property for cabl
-#ro.qualcomm.cabl=0
-
-#
-# System prop for sending transmit power request to RIL during WiFi hotspot on/off
-#
-ro.ril.transmitpower=true
-
-# For workaround for ro.baseband property. QCT use the property same as radio version to determine the architecture.
-# But we hard code to mdm for DLX.
-ro.baseband.arch = mdm
-
-# DLX Hardware Info
-ro.product.bluetooth=4.0
-ro.product.display_resolution = 5 inch 1080p resolution
-ro.product.main_camera = 8M
-ro.product.front_camera = 2M
-ro.product.processor = Quadcore
-ro.product.ram = 2GB
-ro.product.wifi = 802.11 a/b/g/n
-
-
-#wifi
-wifi.interface=wlan0
-wifi.supplicant_scan_interval=15
-wifi.softap.interface=wlan0
-wifi.softapconcurrent.interface=wl0.1
-persist.wifi.v6=true
-persist.wifi.v6.rs.count=5
-persist.wifi.v6.rs.timeout=5
-
 # Support HW reset
 ro.product.hwreset = 1
-
-# UMS
-persist.sys.usb.config=mass_storage,adb
-ro.vold.umsdirtyratio=40
-
