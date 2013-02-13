@@ -34,22 +34,22 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardwardware.sensor.gyroscope.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:/system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:/system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:/system/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:/system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:/system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:/system/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:/system/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:/system/etc/permissions/android.hardwardware.sensor.gyroscope.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:/system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:/system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:/system/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:/system/etc/permissions/android.hardware.usb.host.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:/system/etc/permissions/android.software.sip.voip.xml \
+    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:/system/etc/permissions/android.hardware.sensor.accelerometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:/system/etc/permissions/android.hardware.compass.xml \
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -57,9 +57,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio_policy.msm8960 \
     audio.primary.msm8960 \
-    audio.r_submix.default \
-    audio.usb.default \
-    libaudio-resampler
+    libalsa-intf \
+    libaudioutils
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -67,10 +66,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-   camera.dlx \
-        camera.msm8960 \
-        libmmcamera_interface2 \
-        libmmcamera_interface
+    camera.dlx \
+    camera.msm8960 \
+    libmmcamera_interface \
+    libmmcamera_interface2
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -131,14 +130,13 @@ PRODUCT_PACKAGES += \
 
 # GPS config
 PRODUCT_COPY_FILES += \
-    device/htc/msm8960-common/configs/gps.conf:system/etc/gps.conf
+    device/htc/msm8960-common/configs/gps.conf:/system/etc/gps.conf
 
 # Media config
 PRODUCT_COPY_FILES += \
-    device/htc/msm8960-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    device/htc/msm8960-common/configs/audio_effects.conf:system/etc/audio_effects.conf \
-    device/htc/msm8960-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/msm8960-common/configs/media_codecs.xml:system/etc/media_codecs.xml
+    device/htc/msm8960-common/configs/audio_policy.conf:/system/etc/audio_policy.conf \
+    device/htc/msm8960-common/configs/media_profiles.xml:/system/etc/media_profiles.xml \
+    device/htc/msm8960-common/configs/media_codecs.xml:/system/etc/media_codecs.xml
 
 # MSM8960 firmware
 PRODUCT_COPY_FILES += \
@@ -150,21 +148,22 @@ PRODUCT_COPY_FILES += \
     device/htc/msm8960-common/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw
 
 PRODUCT_COPY_FILES += \
-    device/htc/msm8960-common/configs/htcfs.conf:system/etc/htcfs.conf \
-    device/htc/msm8960-common/configs/gps.conf:system/etc/gps.conf 
-
+    device/htc/msm8960-common/configs/htcfs.conf:/system/etc/htcfs.conf \
+    device/htc/msm8960-common/configs/gps.conf:/system/etc/gps.conf 
 
 # Common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
-    debug.composition.type=dyn \
+    debug.composition.type= gpu \
     debug.enabletr=true \
     ro.hwui.renderer.disable_opaque=true \
     ro.sf.lcd_density=480 \
     debug.egl.hw=1 \
-    debug.mdpcomp.maxlayer=3 \
-    debug.mdpcomp.logs=0
+    debug.mdpcomp.maxlayer=1 \
+    debug.sf.buffercount=3 \
+    debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
+    dev.pm.dyn_samplingrate=1 \
     lpa.decode=true \
     persist.audio.fluence.mode=endfire \
     persist.audio.vr.enable=false \

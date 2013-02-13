@@ -33,7 +33,7 @@ BOARD_VENDOR 				:= htc
 TARGET_NO_BOOTLOADER 			:= true
 
 # Camera
-#TARGET_PROVIDES_CAMERA_HAL 		:= true
+TARGET_PROVIDES_CAMERA_HAL 		:= true
 
 # Kernel
 TARGET_KERNEL_SOURCE 			:= kernel/htc/msm8960
@@ -66,17 +66,16 @@ TARGET_BOOTANIMATION_PRELOAD 		:= true
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE 		:= true
 
-# Audio   added in BoardConfig.mk
+# Audio   
 BOARD_USES_ALSA_AUDIO 			:= true
 BOARD_HAVE_HTC_AUDIO 			:= true
-BOARD_USES_FLUENCE_INCALL 		:= true
-BOARD_USES_SEPERATED_AUDIO_INPUT 	:= true
+#BOARD_USES_FLUENCE_INCALL 		:= true
+#BOARD_USES_SEPERATED_AUDIO_INPUT 	:= true
 
 # Bluetooth
 
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BLUETOOTH_HCI_USE_MCT := true
+BOARD_HAVE_BLUETOOTH 			:= true
+TARGET_CUSTOM_BLUEDROID 		:= ../../../device/htc/msm8960-common/bluetooth/bluetooth.c
 
 # FM radio
 #BOARD_HAVE_QCOM_FM := true
@@ -94,30 +93,44 @@ BOARD_EGL_NEEDS_LEGACY_FB 		:= true
 USE_OPENGL_RENDERER 			:= true
 TARGET_USES_ION 			:= true
 TARGET_USES_OVERLAY 			:= true
+TARGET_USES_SF_BYPASS 			:= true
 
+# RIL
+BOARD_RIL_CLASS := "../../../device/htc/msm8960-common/libril/"
 
-#RIL
-#BOARD_USE_NEW_LIBRIL_HTC := true
-#TARGET_PROVIDES_LIBRIL := vendor/htc/dlx/proprietary/lib/libhtc-ril.so
-BOARD_RIL_CLASS := ../../../device/htc/msm8960-common/libril/HTC8960RIL.java
+# Time
+KERNEL_HAS_GETTIMEOFDAY_HELPER := true
 
 # Wifi
-BOARD_HAS_QCOM_WLAN 			:= true
-BOARD_WLAN_DEVICE 			:= bcmdhd
-BOARD_WLAN_DEVICE_REV 			:= bcm4334
-BOARD_WPA_SUPPLICANT_DRIVER 		:= NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB 	:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_HOSTAPD_DRIVER 			:= NL80211
-BOARD_HOSTAPD_PRIVATE_LIB 		:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_AP 			:= "/system/etc/firmware/fw_bcm4334_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA 		:= "/system/etc/firmware/fw_bcm4334.bin"
-WIFI_DRIVER_FW_PATH_P2P 		:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
-WIFI_DRIVER_MODULE_NAME 		:= "bcmdhd"
-WIFI_DRIVER_MODULE_PATH 		:= "/system/lib/modules/bcmdhd.ko"
+BOARD_HAS_QCOM_WLAN := true
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WIFI_DRIVER_FW_PATH_AP := "ap"
+WIFI_DRIVER_FW_PATH_STA := "sta"
+WIFI_DRIVER_MODULE_NAME := prima_wlan
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/prima_wlan.ko"
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# Wifi
+#BOARD_HAS_QCOM_WLAN 			:= true
+#BOARD_WLAN_DEVICE 			:= bcmdhd
+#BOARD_WLAN_DEVICE_REV 			:= bcm4334
+#BOARD_WPA_SUPPLICANT_DRIVER 		:= NL80211
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB 	:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#BOARD_HOSTAPD_DRIVER 			:= NL80211
+#BOARD_HOSTAPD_PRIVATE_LIB 		:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#WIFI_DRIVER_FW_PATH_AP 			:= "/system/etc/firmware/fw_bcm4334_apsta.bin"
+#WIFI_DRIVER_FW_PATH_STA 		:= "/system/etc/firmware/fw_bcm4334.bin"
+#WIFI_DRIVER_FW_PATH_P2P 		:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
+#WIFI_DRIVER_MODULE_NAME 		:= "bcmdhd"
+#WIFI_DRIVER_MODULE_PATH 		:= "/system/lib/modules/bcmdhd.ko"
 #WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/bcmdhd/parameters/firmware_path"
-WPA_SUPPLICANT_VERSION 			:= VER_0_8_X
-#WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
-WIFI_BAND 				:= 802_11_ABG
+#WPA_SUPPLICANT_VERSION 			:= VER_0_8_X
+#WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/etc/calibration"
+#WIFI_BAND 				:= 802_11_ABG
 
 # Webkit
 ENABLE_WEBGL 				:= true 
