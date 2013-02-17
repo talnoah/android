@@ -1,0 +1,54 @@
+CyanogenMod for HTC DLX
+=======================
+
+First
+------------------------------
+
+Download kernel from HTC for DLX
+
+Add the following paths (if using ubuntu, vi ~/.bashrc):
+
+export USE_CCACHE=1
+
+export CCACHE_DIR=~/cache
+
+export PATH=~~/android/system/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin/:$PATH
+
+export TOP=~/android/system
+
+export ARCH=arm
+
+export SUBARCH=arm
+
+export CROSS_COMPILE=arm-eabi-
+
+
+Setup Build
+-----------------------------
+
+mkdir ~/android/system
+
+cd ~/android/system
+
+repo init -u git://github.com/drewx2/android.git -b jellybean
+
+repo sync
+
+
+Move Kernel into Build Tree
+-----------------------------
+
+Copy kernel sources to ~/android/system/kernel/htc/msm8960
+
+cp ~/android/system/kernel/htc/msm8960/arch/arm/configs/apq8064_defconfig dlx_defconfig
+
+
+Build
+----------------------------
+
+. build/envsetup.sh    (THERE IS A PERIOD IN FRONT OF BUILD)
+
+brunch dlx
+
+
+Problems? Visit XDA thread @ http://forum.xda-developers.com/showthread.php?t=2056517
