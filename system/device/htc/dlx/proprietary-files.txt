@@ -10,8 +10,11 @@ lib/libOpenVG.so
 #lib/soundfx/libsrsfx.so
 #lib/libsoundpool.so
 #lib/libDxAndroidSpecific.so
-#lib/hw/camera.msm8960.so
 lib/libfuse.so
+#lib/libhardware_legacy.so
+lib/CommandSvc.so
+lib/libconfigdb.so
+lib/libqcci_legacy.so
 
 #Configuration files
 etc/agps_rm
@@ -21,32 +24,31 @@ etc/agps_rm
 #bin/adaptive
 bin/akmd
 bin/ATFWD-daemon
-#bin/bridgemgrd
+bin/bridgemgrd
 bin/bma150_usr
 bin/charging
-#bin/ds_fmc_appd
+bin/ds_fmc_appd
 bin/DxDrmServerIpc
-#bin/efsks
+bin/efsks
 #bin/hci_qcomm_init
 bin/hcheck
 #bin/hdmid
-#bin/ks
+bin/ks
 bin/mm-qcamera-daemon
 bin/mpdecision
 #bin/mm-pp-daemon
 bin/netmgrd
-#bin/nl_listener
+bin/nl_listener
 bin/netsharing
-#bin/pnpmgr
+bin/port-bridge
 bin/qcks
 bin/qmiproxy
 bin/qmuxd
 bin/qseecomd
 bin/radish
-#bin/shutdown
 bin/thermald
-#bin/usbhub
-#bin/usbhub_init
+bin/usbhub
+bin/usbhub_init
 bin/v4l2-qcamera-app
 
 
@@ -83,7 +85,6 @@ lib/libcameraface.so
 lib/libcameraasd.so
 lib/libcamerapp.so
 lib/libcam_oem_plugin.so
-#lib/libDxOAF.so
 lib/liboemcamera.so
 lib/libOlaEngineNew.so
 lib/libposteffect.so
@@ -199,13 +200,6 @@ lib/libmllite.so
 lib/libmpl.so
 
 
-#lib/libsrsprocessing.so
-#lib/libext3-fileio.so
-#lib/libfrsdk.so
-#lib/libfuse.so
-#lib/libgcomm_jni.so
-
-
 # Q6 firmware
 #etc/firmware/q6/q6.b00
 #etc/firmware/q6/q6.b01
@@ -277,10 +271,6 @@ etc/firmware/tzapps.mdt
 
 vendor/firmware/libpn544_fw.so
 #vendor/firmware/mfg.bin
-#vendor/lib/libwvm.so
-#vendor/lib/libwvdrm_L1.so
-#vendor/lib/libWVStreamControlAPI_L1.so
-#vendor/lib/drm/libdrmwvmplugin.so
 
 
 
